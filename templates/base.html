@@ -23,14 +23,29 @@
             .parallax-container {
               height: 400px;
             }
+            html{
+              font-family: Roboto-200;
+            }
+            body {
+                display: flex;
+                min-height: 100vh;
+                flex-direction: column;
+            }
+
+            main {
+                flex: 1 0 auto;
+            }
         </style>
         {% render_block "css" %}
     </head>
     <body>
         {% cms_toolbar %}
         {% block navbar %}{% endblock navbar %}
+        <main>
         {% block subnavbar %}{% endblock subnavbar %}
+        {% block social_media %}{% endblock social_media %}
         {% block content %}{% endblock content %}
+        </main>
         <footer>
           {% static_placeholder 'footer' %}
         </footer>

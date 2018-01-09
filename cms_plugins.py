@@ -1,7 +1,7 @@
 from cms.plugin_base import CMSPluginBase
 from cms.plugin_pool import plugin_pool
 from cms.models.pluginmodel import CMSPlugin
-from djangocms_materializecss.models import CollectionItem, Column, Footer, Navbar, Parallax, Slide, SocialMediaBar
+from djangocms_materializecss.models import Card, CollectionItem, Column, Footer, ImageCard, Navbar, Parallax, Slide, SocialMediaBar
 from django.utils.translation import ugettext_lazy as _
 
 #https://cdn-images-1.medium.com/max/1600/1*9Zt6Pxc1Y4tvuNO04CGX_Q.jpeg
@@ -9,7 +9,7 @@ from django.utils.translation import ugettext_lazy as _
 
 @plugin_pool.register_plugin
 class CardPlugin(CMSPluginBase):
-    model = CMSPlugin
+    model = Card
     render_template = "djangocms_materializecss/card.html"
     cache = False
     allow_children = True
@@ -72,6 +72,17 @@ class FooterPlugin(CMSPluginBase):
 
     def render(self, context, instance, placeholder):
         context = super(FooterPlugin, self).render(context, instance, placeholder)
+        return context
+
+@plugin_pool.register_plugin
+class ImageCardPlugin(CMSPluginBase):
+    model = ImageCard
+    render_template = "djangocms_materializecss/img_card.html"
+    cache = False
+    allow_children = True
+
+    def render(self, context, instance, placeholder):
+        context = super(ImageCardPlugin, self).render(context, instance, placeholder)
         return context
 
 @plugin_pool.register_plugin
