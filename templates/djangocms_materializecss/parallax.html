@@ -1,0 +1,22 @@
+{% load cms_tags sekizai_tags static menu_tags %}
+<div>
+<div class="parallax-container">
+  <div class="parallax"><img src="{{instance.img_url}}"></div>
+</div>
+<div class="section">
+ <div class="container">
+     <div class="row">
+        {% for plugin in instance.child_plugin_instances %}
+            {% render_plugin plugin %}
+        {% endfor %}
+     </div>
+  </div>
+</div>
+<script>
+
+    $(document).ready(function(){
+      $('.parallax').parallax();
+    });
+
+</script>
+</div>

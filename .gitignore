@@ -1,0 +1,5 @@
+*.swp
+env/
+migrations/0*
+.sass-cache/
+__pycache__/

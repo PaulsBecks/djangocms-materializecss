@@ -1,0 +1,40 @@
+{% load cms_tags menu_tags sekizai_tags static %}
+<!doctype html>
+<html>
+    <head>
+        <title>{% block title %}This is my new project home page{% endblock title %}</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="{% static "djangocms_materializecss/css/materialize.css" %}">
+
+        <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+        <!-- JQuery -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+        <style type="text/css">
+            .parallax-container {
+              height: 400px;
+            }
+        </style>
+        {% render_block "css" %}
+    </head>
+    <body>
+        {% cms_toolbar %}
+        {% block navbar %}{% endblock navbar %}
+        {% block subnavbar %}{% endblock subnavbar %}
+        {% block content %}{% endblock content %}
+        <footer>
+          {% static_placeholder 'footer' %}
+        </footer>
+        {% render_block "js" %}
+
+    </body>
+</html>

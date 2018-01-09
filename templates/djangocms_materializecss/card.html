@@ -1,0 +1,10 @@
+{% load cms_tags %}
+<div class="col s12 m8 offset-m2 l10 offset-l1">
+    <div class="card-panel grey lighten-5 z-depth-1" style="padding:5px;padding-left:10px">
+        <div class="row" style="margin-bottom:0px">
+        {% for plugin in instance.child_plugin_instances %}
+            {% render_plugin plugin %}
+        {% endfor %}
+        </div>
+    </div>
+</div>

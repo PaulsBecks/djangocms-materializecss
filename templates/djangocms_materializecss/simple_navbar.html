@@ -1,0 +1,19 @@
+{% load  menu_tags %}
+<nav class="">
+    <div class=" container nav-wrapper">
+      <a href="#" class="brand-logo">
+        {{ instance.company_name }}
+      </a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        {% show_menu 0 0 0 0 %}
+      </ul>
+    </div>
+</nav>
+<ul class="side-nav" id="mobile-demo">
+    {% show_menu 0 0 0 0 %}
+</ul>
+<script>
+     $(".button-collapse").sideNav();
+</script>
