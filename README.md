@@ -22,4 +22,8 @@
  
  Now the new plugins should be viewable in the cms frontend. 
  
+ # License
+ 
+ This project is under MIT license.
+ ___
  Greets [Paul Beck](paulbeck.info)
