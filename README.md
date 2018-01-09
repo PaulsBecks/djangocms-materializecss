@@ -22,6 +22,10 @@
  
  Now the new plugins should be viewable in the cms frontend. 
  
+ # Other Settings
+ 
+ If you want to use the base file included in this project simply delete or rename the one created by djangocms.
+ 
  # License
  
  This project is under MIT license.
