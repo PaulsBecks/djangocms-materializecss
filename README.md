@@ -10,6 +10,7 @@
   ...
   'djangocms-materializecss',
   ...
+ )
  ```
  
  Migrate:
