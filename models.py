@@ -46,6 +46,7 @@ class Navbar(CMSPlugin):
 
 class Parallax(CMSPlugin):
     img_url = models.CharField(max_length=MAX_URL_LENGTH, default='')
+    headline = models.CharField(max_length=50, blank=True, default='')
 
 class Slide(CMSPlugin):
     img_url = models.CharField(max_length=MAX_URL_LENGTH, default='')
