@@ -8,7 +8,11 @@
         </div>
         <div class="card-reveal">
           <span class="card-title red-text text-darken-4">{{ instance.name }}<i class="material-icons right">close</i></span>
-          <p>{{ instance.text }}</p>
+          <p>{{ instance.text }}
+              {% if instance.link_url %}
+              <a href="{{instance.link_url}}">more</a>
+              {% endif %}
+          </p>
         </div>
     </div>
 </div>
