@@ -1,6 +1,6 @@
 <!-- This template is a sidebar for social media pages -->
 
-<ul style="z-index:20;position:fixed;left:20px;top:150px;right:auto;bottom:auto">
+<ul class="hide-on-med-and-down" style="z-index:20;position:fixed;left:20px;top:150px;right:auto;bottom:auto">
     {% if instance.twitter_url %}
     <li style="display: block; margin: 10px 0;">
         <a class="btn-floating btn-large blue lighten-3" href="{{ instance.twitter_url }}">
@@ -29,6 +29,40 @@
     {% if instance.linkedin_url %}
     <li style="display: block; margin: 10px 0;">
         <a class="btn-floating btn-large waves-effect waves-light blue darken-2" href="{{ instance.linkedin_url }}"><i class="ion-social-linkedin"></i>
+        </a>
+    </li>
+    {% endif %}
+</ul>
+
+<ul class="tabs hide-on-large-only">
+    {% if instance.twitter_url %}
+    <li class="tab" style="display: block; margin: 10px 0;">
+        <a class="blue lighten-3 white-text" href="{{ instance.twitter_url }}">
+          <i class="ion-social-twitter"></i>
+        </a>
+    </li>
+    {% endif %}
+    {% if instance.github_url %}
+    <li class="tab" style="display: block; margin: 10px 0;">
+        <a class="white-text black" href="{{ instance.github_url }}"><i class="ion-social-github"></i>
+        </a>
+    </li>
+    {% endif %}
+    {% if instance.facebook_url %}
+    <li class="tab" style="display: block; margin: 10px 0;">
+        <a class="white-text blue" href="{{ instance.facebook_url }}"><i class="ion-social-facebook"></i>
+        </a>
+    </li>
+    {% endif %}
+    {% if instance.yelp_url %}
+    <li class="tab" style="display: block; margin: 10px 0;">
+        <a class="white-text white " href="{{ instance.yelp_url }}"><i class="ion-social-yelp"></i>
+        </a>
+    </li>
+    {% endif %}
+    {% if instance.linkedin_url %}
+    <li class="tab" style="display: block; margin: 10px 0;">
+        <a class="white-text blue darken-2" href="{{ instance.linkedin_url }}"><i class="ion-social-linkedin"></i>
         </a>
     </li>
     {% endif %}
