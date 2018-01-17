@@ -43,6 +43,7 @@ class Footer(CMSPlugin):
 
 class Navbar(CMSPlugin):
     company_name = models.CharField(max_length=50, default='')
+    fixed = models.BooleanField(default='False')
 
 class Parallax(CMSPlugin):
     img_url = models.CharField(max_length=MAX_URL_LENGTH, default='')
@@ -52,6 +53,10 @@ class Slide(CMSPlugin):
     img_url = models.CharField(max_length=MAX_URL_LENGTH, default='')
     tagline = models.CharField(max_length=50, default='')
     slogan = models.CharField(max_length=100, default='')
+    link_url = models.CharField(max_length=MAX_URL_LENGTH, default='')
+
+class Slider(CMSPlugin):
+    fullscreen = models.BooleanField(default='False')
 
 class SocialMediaBar(CMSPlugin):
     twitter_url = models.CharField(max_length=MAX_URL_LENGTH, blank=True, default='')
