@@ -35,6 +35,7 @@
             main {
                 flex: 1 0 auto;
             }
+            {% block custom_css %}{% endblock custom_css %}
         </style>
         {% render_block "css" %}
     </head>
@@ -46,9 +47,8 @@
         {% block content %}{% endblock content %}
         {% block social_media %}{% endblock social_media %}
         </main>
-        <footer>
-          {% static_placeholder 'footer' %}
-        </footer>
+        {% block footer %}{% endblock footer %}
+
         {% render_block "js" %}
 
     </body>

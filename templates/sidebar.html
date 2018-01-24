@@ -4,6 +4,11 @@
 {% block navbar %}{% static_placeholder "sidenav" %}{% endblock navbar %}
 {% block title %}{% page_attribute "page_title" %}{% endblock title %}
 
-{% block content %}
-	{% placeholder "content" %}
-{% endblock content %}
+{% block content %}{% placeholder "content" %}{% endblock content %}
+{% block footer %}{% static_placeholder 'sidebar-footer' %}{% endblock footer %}
+{% block custom_css %}
+
+	main, footer {
+		padding-left:300px;
+	}
+{% endblock custom_css %}
