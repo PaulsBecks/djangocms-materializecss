@@ -21,6 +21,7 @@ class Column(CMSPlugin):
     m = models.IntegerField(default=12, blank=True)
     l = models.IntegerField(default=12, blank=True)
     classes = models.CharField(max_length=120, blank=True, default='')
+    center = models.BooleanField(default=False, blank=True)
 
 class ImageCard(CMSPlugin):
     s = models.IntegerField(default=12, blank=True)
