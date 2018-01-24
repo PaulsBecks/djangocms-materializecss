@@ -45,4 +45,4 @@ For Editors a [simple guide](https://paulbeck.info/en/portfolio/djangocms-materi
  
  This project is under MIT license.
  ___
- Greets [Paul Beck](paulbeck.info)
+ Greets [Paul Beck](https://www.paulbeck.info)
