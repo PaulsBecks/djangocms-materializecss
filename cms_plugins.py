@@ -1,7 +1,7 @@
 from cms.plugin_base import CMSPluginBase
 from cms.plugin_pool import plugin_pool
 from cms.models.pluginmodel import CMSPlugin
-from djangocms_materializecss.models import Card, CollectionItem, Column, Footer, ImageCard, Navbar, Parallax, Sidebar, Slide, SocialMediaBar
+from djangocms_materializecss.models import Card, CollectionItem, Column, Footer, ImageCard, Navbar, Parallax, Sidebar, Slide, Slider, SocialMediaBar
 from django.utils.translation import ugettext_lazy as _
 
 #https://cdn-images-1.medium.com/max/1600/1*9Zt6Pxc1Y4tvuNO04CGX_Q.jpeg
@@ -64,6 +64,13 @@ class ContainerPlugin(CMSPluginBase):
         return context
 
 @plugin_pool.register_plugin
+class DividerPlugin(CMSPluginBase):
+    model = CMSPlugin
+    render_template = "djangocms_materializecss/divider.html"
+    cache = False
+    allow_children = False
+
+@plugin_pool.register_plugin
 class FooterPlugin(CMSPluginBase):
     model = Footer
     render_template = "djangocms_materializecss/simple_footer.html"
@@ -119,7 +126,7 @@ class SidebarPlugin(CMSPluginBase):
 
 @plugin_pool.register_plugin
 class SliderPlugin(CMSPluginBase):
-    model = CMSPlugin
+    model = Slider
     render_template = "djangocms_materializecss/slider.html"
     cache = False
     allow_children = True
