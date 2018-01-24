@@ -1,0 +1,14 @@
+{% load menu_tags %}
+
+{% for child in children %}
+<li class="{% if child.selected %} active{% endif %}">
+	<a class="{% if child.selected %} active {% endif %} {% if child.children %} collapsible-header {% endif %}" {% if not child.children %} target="_self"  href="{{ child.attr.redirect_url|default:child.get_absolute_url }}" {% endif %} >{{ child.get_menu_title }}</a>
+    {% if child.children %}
+	<div class="collapsible-body">
+        <ul>
+            {% show_menu from_level to_level extra_inactive extra_active template "" "" child %}
+        </ul>
+    </div>
+    {% endif %}
+</li>
+{% endfor %}

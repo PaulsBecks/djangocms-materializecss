@@ -1,5 +1,6 @@
 {% load  menu_tags %}
-<nav class="">
+<div class="{% if instance.fixed%} navbar-fixed {% endif %} ">
+<nav>
     <div class=" container nav-wrapper">
       <a href="/" class="brand-logo">
         {{ instance.company_name }}
@@ -11,6 +12,7 @@
       </ul>
     </div>
 </nav>
+</div>
 <ul class="side-nav" id="mobile-demo">
     {% show_menu 0 0 0 0 %}
 </ul>
