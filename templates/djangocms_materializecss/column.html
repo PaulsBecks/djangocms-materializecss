@@ -1,6 +1,6 @@
 {% load cms_tags %}
 <div class="col s{{ instance.s }} m{{ instance.m }} l{{ instance.l }} {{ instance.classes }}">
-    <div class="row center-align">
+    <div class="row {% if instance.center %} center-align {% endif %}">
         {% for plugin in instance.child_plugin_instances %}
             {% render_plugin plugin %}
         {% endfor %}
