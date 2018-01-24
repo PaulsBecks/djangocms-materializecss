@@ -1,7 +1,7 @@
 from cms.plugin_base import CMSPluginBase
 from cms.plugin_pool import plugin_pool
 from cms.models.pluginmodel import CMSPlugin
-from djangocms_materializecss.models import Card, CollectionItem, Column, Footer, ImageCard, Navbar, Parallax, Slide, SocialMediaBar
+from djangocms_materializecss.models import Card, CollectionItem, Column, Footer, ImageCard, Navbar, Parallax, Sidebar, Slide, SocialMediaBar
 from django.utils.translation import ugettext_lazy as _
 
 #https://cdn-images-1.medium.com/max/1600/1*9Zt6Pxc1Y4tvuNO04CGX_Q.jpeg
@@ -105,6 +105,16 @@ class ParallaxPlugin(CMSPluginBase):
 
     def render(self, context, instance, placeholder):
         context = super(ParallaxPlugin, self).render(context, instance, placeholder)
+        return context
+
+@plugin_pool.register_plugin
+class SidebarPlugin(CMSPluginBase):
+    model = Sidebar
+    render_template = "djangocms_materializecss/sidebar.html"
+    cache = False
+
+    def render(self, context, instance, placeholder):
+        context = super(SidebarPlugin, self).render(context, instance, placeholder)
         return context
 
 @plugin_pool.register_plugin
