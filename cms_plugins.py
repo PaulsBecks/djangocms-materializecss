@@ -71,6 +71,14 @@ class DividerPlugin(CMSPluginBase):
     allow_children = False
 
 @plugin_pool.register_plugin
+class FlowTextPlugin(CMSPluginBase):
+    model = CMSPlugin
+    render_template = "djangocms_materializecss/flow_text.html"
+    cache = False
+    allow_children = True
+    text_enabled = True
+
+@plugin_pool.register_plugin
 class FooterPlugin(CMSPluginBase):
     model = Footer
     render_template = "djangocms_materializecss/simple_footer.html"
