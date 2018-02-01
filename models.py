@@ -4,6 +4,9 @@ from django.db import models
 
 MAX_URL_LENGTH = 150
 
+class CallUs(CMSPlugin):
+    number = models.CharField(max_length=MAX_URL_LENGTH, default='')
+
 class Card(CMSPlugin):
     s = models.IntegerField(default=12, blank=True)
     m = models.IntegerField(default=12, blank=True)
@@ -68,4 +71,5 @@ class SocialMediaBar(CMSPlugin):
     facebook_url = models.CharField(max_length=MAX_URL_LENGTH, blank=True, default='')
     github_url = models.CharField(max_length=MAX_URL_LENGTH, blank=True, default='')
     linkedin_url = models.CharField(max_length=MAX_URL_LENGTH, blank=True, default='')
-
+    insta_url = models.CharField(max_length=MAX_URL_LENGTH, blank=True, default='')
+    mail = models.CharField(max_length=22, blank=True, default='')
