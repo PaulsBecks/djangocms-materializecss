@@ -1,0 +1,38 @@
+<!-- This template is a sidebar for social media pages -->
+
+<div class="hide-on-med-and-down" style="z-index:20;position:fixed;right:20px;top:150px;left:auto;bottom:auto">
+      <div class="col s12 m8 offset-m2 l6 offset-l3">
+        <div class="card-panel grey lighten-5 z-depth-1" style="padding-bottom:2px;padding-top:2px;">
+          <div class="row valign-wrapper" style="margin-bottom:0px">
+            <div class="col s3" style="">
+              <i class="ion-ios-telephone" style="line-height: 56px;font-size: 1.6rem;"></i> <!-- notice the "circle" class -->
+            </div>
+            <div class="col s9">
+              <span class="black-text">
+                {{ instance.number }}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+
+
+<!-- Tab like bar -->
+
+<div class="hide-on-large-only" style="z-index:20;position:fixed;right:20px;bottom:0px;left:auto;top:auto">
+    <div class="col s12 m8 offset-m2 l6 offset-l3">
+        <div class="card-panel grey lighten-5 z-depth-1" style="padding-bottom:2px;padding-top:2px;">
+          <div class="row valign-wrapper" style="margin-bottom:0px">
+            <div class="col s3" style="">
+              <i class="ion-ios-telephone" style="line-height: 56px;font-size: 1.6rem;"></i> <!-- notice the "circle" class -->
+            </div>
+            <div class="col s9">
+              <span class="black-text">
+                  <a href="tel:{{ instance.number }}">{{ instance.number }}</a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>

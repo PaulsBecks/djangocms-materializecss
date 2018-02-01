@@ -8,12 +8,6 @@
         </a>
     </li>
     {% endif %}
-    {% if instance.github_url %}
-    <li style="display: block; margin: 10px 0;">
-        <a class="btn-floating btn-large waves-effect waves-light black" href="{{ instance.github_url }}"><i class="ion-social-github"></i>
-        </a>
-    </li>
-    {% endif %}
     {% if instance.facebook_url %}
     <li style="display: block; margin: 10px 0;">
         <a class="btn-floating btn-large waves-effect waves-light blue" href="{{ instance.facebook_url }}"><i class="ion-social-facebook"></i>
@@ -29,6 +23,24 @@
     {% if instance.linkedin_url %}
     <li style="display: block; margin: 10px 0;">
         <a class="btn-floating btn-large waves-effect waves-light blue darken-2" href="{{ instance.linkedin_url }}"><i class="ion-social-linkedin"></i>
+        </a>
+    </li>
+    {% endif %}
+    {% if instance.insta_url %}
+    <li style="display: block; margin: 10px 0;">
+        <a class="btn-floating btn-large waves-effect waves-light purple darken-2" href="tel:{{ instance.insta_url }}"><i class="ion-social-instagram"></i>
+        </a>
+    </li>
+    {% endif %}
+    {% if instance.mail %}
+    <li style="display: block; margin: 10px 0;">
+        <a class="btn-floating btn-large waves-effect waves-light blue-grey darken-2" href="mailto:{{ instance.mail }}"><i class="ion-email"></i>
+        </a>
+    </li>
+    {% endif %}
+    {% if instance.github_url %}
+    <li style="display: block; margin: 10px 0;">
+        <a class="btn-floating btn-large waves-effect waves-light black" href="{{ instance.github_url }}"><i class="ion-social-github"></i>
         </a>
     </li>
     {% endif %}
