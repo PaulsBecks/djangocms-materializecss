@@ -4,7 +4,7 @@ from django.db import models
 
 MAX_URL_LENGTH = 150
 
-class CallUs(CMSPlugin):
+class Call(CMSPlugin):
     number = models.CharField(max_length=MAX_URL_LENGTH, default='')
 
 class Card(CMSPlugin):

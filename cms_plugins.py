@@ -1,14 +1,14 @@
 from cms.plugin_base import CMSPluginBase
 from cms.plugin_pool import plugin_pool
 from cms.models.pluginmodel import CMSPlugin
-from djangocms_materializecss.models import CallUs, Card, CollectionItem, Column, Footer, ImageCard, Navbar, Parallax, Sidebar, Slide, Slider, SocialMediaBar
+from djangocms_materializecss.models import Call, Card, CollectionItem, Column, Footer, ImageCard, Navbar, Parallax, Sidebar, Slide, Slider, SocialMediaBar
 from django.utils.translation import ugettext_lazy as _
 
 #https://cdn-images-1.medium.com/max/1600/1*9Zt6Pxc1Y4tvuNO04CGX_Q.jpeg
 
 @plugin_pool.register_plugin
 class CallUsPlugin(CMSPluginBase):
-    model = CallUs
+    model = Call
     render_template = "djangocms_materializecss/call_us.html"
     cache = False
     allow_children = True
