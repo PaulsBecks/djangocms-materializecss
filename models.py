@@ -38,6 +38,7 @@ class ImageCard(CMSPlugin):
 
 class Footer(CMSPlugin):
     header = models.CharField(max_length=50, default='')
+    color = models.CharField(max_length=50, default='')
     text = models.CharField(max_length=150, default='')
     link_header = models.CharField(max_length=50, default='')
     link_url = models.CharField(max_length=50, default='')
@@ -47,6 +48,7 @@ class Footer(CMSPlugin):
 
 class Navbar(CMSPlugin):
     company_name = models.CharField(max_length=50, default='')
+    color = models.CharField(max_length=50, default='')
     fixed = models.BooleanField(default='False')
 
 class Parallax(CMSPlugin):
