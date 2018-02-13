@@ -48,6 +48,7 @@ class Footer(CMSPlugin):
 
 class Navbar(CMSPlugin):
     company_name = models.CharField(max_length=50, default='')
+    color = models.CharField(max_length=50, default='')
     fixed = models.BooleanField(default='False')
 
 class Parallax(CMSPlugin):
